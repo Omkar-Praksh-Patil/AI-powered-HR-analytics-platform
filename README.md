@@ -8,6 +8,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![CI](https://github.com/Omkar-Praksh-Patil/AI-powered-HR-analytics-platform/actions/workflows/ci.yml/badge.svg)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Omkar%20Patil-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omkar-patil-ece)
 
 ---
 
@@ -170,6 +171,12 @@ Pull requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🔗 Connect
+
+**Omkar Prakash Patil** — [LinkedIn](https://www.linkedin.com/in/omkar-patil-ece) · [GitHub](https://github.com/Omkar-Praksh-Patil)
 
 ---
 
