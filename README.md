@@ -173,8 +173,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 👤 Author
-
-**Omkar Prakash Patil** — Built AttritionIQ as part of an AI-powered HR analytics initiative.
-
 > ⭐ If you found this helpful, please give the repo a star!

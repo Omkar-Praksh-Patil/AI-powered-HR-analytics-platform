@@ -10,8 +10,8 @@
 
 If you discover a security vulnerability in AttritionIQ, please:
 
-1. **Do NOT** open a public GitHub issue.
-2. Email the details to: `omkar.praksh.patil@gmail.com`
+1. **Do NOT** open a public GitHub issue for security vulnerabilities.
+2. Instead, contact via [GitHub Profile](https://github.com/Omkar-Praksh-Patil) directly.
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce
