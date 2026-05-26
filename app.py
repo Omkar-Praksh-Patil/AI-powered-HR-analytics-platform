@@ -4,6 +4,7 @@ import numpy as np
 from pymongo import MongoClient
 from datetime import datetime
 import time
+import os
 
 app = Flask(__name__)
 
@@ -11,8 +12,9 @@ app = Flask(__name__)
 model = pickle.load(open("employee_model.pkl", "rb"))
 
 # 🔹 MongoDB connection
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
 try:
-    client = MongoClient("mongodb://localhost:27017/", serverSelectionTimeoutMS=2000)
+    client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=2000)
     client.server_info()  # trigger connection test
     db = client["employee_db"]
     collection = db["predictions"]
@@ -117,4 +119,5 @@ def dashboard():
 
 # 🔹 Run app
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug = os.environ.get("FLASK_DEBUG", "False").lower() == "true"
+    app.run(debug=debug)
