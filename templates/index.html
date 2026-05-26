@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>HR Attrition Analyst - Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f2f4f6",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-container": "#0b1c30",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container": "#eceef0",
+                        "secondary": "#0058be",
+                        "surface-tint": "#565e74",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "inverse-primary": "#bec6e0",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-container": "#fefcff",
+                        "background": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#004395",
+                        "tertiary-fixed": "#d3e4fe",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#7c839b",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-background": "#191c1e",
+                        "on-tertiary-container": "#75859d",
+                        "outline": "#76777d",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#2170e4",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed": "#131b2e",
+                        "primary-container": "#131b2e",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary": "#000000",
+                        "amber-warn": "#f59e0b",
+                        "green-ok": "#10b981"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "margin": "32px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xl": "64px",
+                        "gutter": "24px",
+                        "max_width": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "caption": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "h1": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "h3": ["Manrope"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Manrope"],
+                        "h4": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "500" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h1": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h2": ["30px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h4": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased flex min-h-screen">
+
+<!-- SideNavBar -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-[260px] border-r border-slate-200 bg-white shadow-sm flex-col py-6 z-50">
+    <div class="px-6 mb-8 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+            <span class="material-symbols-outlined filled">person</span>
+        </div>
+        <div>
+            <h2 class="font-h4 text-h4 text-xl font-bold text-slate-900 tracking-tighter">HR Intel</h2>
+            <p class="font-caption text-caption text-on-surface-variant">Enterprise Analytics</p>
+        </div>
+    </div>
+    <nav class="flex-1 px-3 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-900 font-semibold border-r-2 border-slate-900 hover:bg-slate-50 transition-colors active:scale-95 duration-150 rounded-lg" href="/">
+            <span class="material-symbols-outlined">home</span>
+            <span class="font-label-md text-label-md">Home</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-colors active:scale-95 duration-150 rounded-lg" href="/history">
+            <span class="material-symbols-outlined">history</span>
+            <span class="font-label-md text-label-md">History</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-colors active:scale-95 duration-150 rounded-lg" href="/dashboard">
+            <span class="material-symbols-outlined">analytics</span>
+            <span class="font-label-md text-label-md">Dashboard</span>
+        </a>
+    </nav>
+    <div class="px-6 mt-auto">
+        <a href="/" class="w-full py-2 px-4 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined">add</span>
+            New Analysis
+        </a>
+    </div>
+</aside>
+
+<!-- Main Content Wrapper -->
+<div class="flex-1 md:ml-[260px] flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <header class="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md flex justify-between items-center h-16 px-8">
+        <div class="flex items-center gap-4">
+            <h1 class="text-lg font-black text-slate-900 font-h3 text-h3">HR Attrition Analyst</h1>
+        </div>
+        <div class="flex items-center gap-6">
+            <!-- Search -->
+            <div class="relative hidden sm:block">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+                <input class="pl-10 pr-4 py-1.5 bg-surface-container-low border border-outline-variant rounded-full font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-64 transition-all" placeholder="Search..." type="text"/>
+            </div>
+            <!-- Actions -->
+            <div class="flex items-center gap-4 text-slate-500">
+                <button class="hover:text-slate-900 transition-all cursor-pointer active:opacity-70 p-1 rounded-full hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="hover:text-slate-900 transition-all cursor-pointer active:opacity-70 p-1 rounded-full hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden cursor-pointer border border-outline-variant flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-sm filled">person</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-md md:p-margin max-w-max_width mx-auto w-full">
+        <!-- Hero Section -->
+        <section class="mb-12 text-center max-w-3xl mx-auto pt-8">
+            <h2 class="font-h1 text-h1 text-on-surface mb-4">AI-Based Employee Attrition Analysis</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Leverage predictive models to identify turnover risks and proactively manage talent retention based on key employee metrics.</p>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Form Area -->
+            <div class="lg:col-span-7 xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-[0px_1px_3px_rgba(15,23,42,0.08)] border border-slate-200 p-8">
+                <div class="mb-6 pb-4 border-b border-surface-variant">
+                    <h3 class="font-h3 text-h3 text-on-surface flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary">tune</span>
+                        Prediction Parameters
+                    </h3>
+                </div>
+                <form method="POST" class="space-y-6" id="predictionForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Field: Age -->
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block" for="age">Age</label>
+                            <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="age" name="age" placeholder="e.g. 35" required type="number"/>
+                        </div>
+                        <!-- Field: Experience -->
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block" for="experience">Total Working Years</label>
+                            <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="experience" name="experience" placeholder="e.g. 10" required type="number"/>
+                        </div>
+                        <!-- Field: Monthly Income -->
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block" for="income">Monthly Income ($)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-body-md text-body-md">$</span>
+                                <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg pl-8 pr-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="income" name="income" placeholder="5000" required type="number"/>
+                            </div>
+                        </div>
+                        <!-- Field: Job Satisfaction -->
+                        <div class="space-y-2">
+                            <label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block" for="satisfaction">Job Satisfaction (1-4)</label>
+                            <select class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none" id="satisfaction" name="satisfaction" required>
+                                <option disabled selected value="">Select level...</option>
+                                <option value="1">1 - Low</option>
+                                <option value="2">2 - Medium</option>
+                                <option value="3">3 - High</option>
+                                <option value="4">4 - Very High</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-surface-variant flex justify-end">
+                        <button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors shadow-sm flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed" type="submit" id="predictBtn">
+                            <span class="material-symbols-outlined" id="predictIcon">auto_awesome</span>
+                            <span id="predictBtnText">Predict Attrition Risk</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Area -->
+            <div class="lg:col-span-5 xl:col-span-4 space-y-6">
+                <div id="resultCard" class="bg-surface-container-lowest rounded-xl shadow-[0px_1px_3px_rgba(15,23,42,0.08)] border border-slate-200 overflow-hidden relative {% if not result %}hidden{% endif %}">
+                    <!-- Decorative top accent - color based on risk -->
+                    {% if risk == "High Risk ⚠️" %}
+                    <div class="h-2 w-full bg-error"></div>
+                    {% elif risk == "Medium Risk" %}
+                    <div class="h-2 w-full bg-amber-warn"></div>
+                    {% else %}
+                    <div class="h-2 w-full bg-green-ok"></div>
+                    {% endif %}
+
+                    <div class="p-8 text-center flex flex-col items-center">
+                        <!-- Icon based on risk -->
+                        {% if risk == "High Risk ⚠️" %}
+                        <div class="w-16 h-16 rounded-full bg-error-container/30 flex items-center justify-center mb-4 border border-error-container">
+                            <span class="material-symbols-outlined text-error text-3xl filled">warning</span>
+                        </div>
+                        {% elif risk == "Medium Risk" %}
+                        <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-4 border border-amber-300">
+                            <span class="material-symbols-outlined text-amber-600 text-3xl filled">info</span>
+                        </div>
+                        {% else %}
+                        <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4 border border-emerald-300">
+                            <span class="material-symbols-outlined text-emerald-600 text-3xl filled">check_circle</span>
+                        </div>
+                        {% endif %}
+
+                        <h4 class="font-h4 text-h4 text-on-surface mb-2">Attrition Probability</h4>
+
+                        <!-- Large Probability Display -->
+                        {% if prob is not none %}
+                        <div class="my-6">
+                            <span class="text-[56px] font-h1 font-bold text-on-surface leading-none tracking-tighter">{{ (prob * 100) | round(1) | int }}<span class="text-3xl text-on-surface-variant">%</span></span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Contextual Card -->
+                <div id="insightCard" class="bg-surface-bright rounded-xl border border-outline-variant border-dashed p-6 flex gap-4 {% if not result %}hidden{% endif %}">
+                    <div class="text-tertiary-container mt-1">
+                        <span class="material-symbols-outlined">lightbulb</span>
+                    </div>
+                    <div>
+                        <h5 class="font-label-md text-label-md text-on-surface mb-1">Retention Insight</h5>
+                        {% if risk == "High Risk ⚠️" %}
+                        <p class="font-caption text-caption text-on-surface-variant">Immediate intervention recommended. Consider compensation reviews, role realignment, or career development discussions.</p>
+                        {% elif risk == "Medium Risk" %}
+                        <p class="font-caption text-caption text-on-surface-variant">Monitor closely. Engage with the employee through regular check-ins and satisfaction surveys.</p>
+                        {% else %}
+                        <p class="font-caption text-caption text-on-surface-variant">Employee shows strong retention indicators. Continue supporting growth and maintaining satisfaction.</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Empty state when no prediction has been made -->
+                <div id="emptyStateCard" class="bg-surface-container-lowest rounded-xl shadow-[0px_1px_3px_rgba(15,23,42,0.08)] border border-slate-200 overflow-hidden {% if result %}hidden{% endif %}">
+                    <div class="h-2 w-full bg-surface-variant"></div>
+                    <div class="p-8 text-center flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-4 border border-outline-variant">
+                            <span class="material-symbols-outlined text-on-surface-variant text-3xl">psychology</span>
+                        </div>
+                        <h4 class="font-h4 text-h4 text-on-surface mb-2">Awaiting Input</h4>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">Fill in the employee parameters and click <strong>Predict Attrition Risk</strong> to see the analysis results here.</p>
+                    </div>
+                </div>
+                <div id="emptyTipCard" class="bg-surface-bright rounded-xl border border-outline-variant border-dashed p-6 flex gap-4 {% if result %}hidden{% endif %}">
+                    <div class="text-tertiary-container mt-1">
+                        <span class="material-symbols-outlined">lightbulb</span>
+                    </div>
+                    <div>
+                        <h5 class="font-label-md text-label-md text-on-surface mb-1">Quick Tip</h5>
+                        <p class="font-caption text-caption text-on-surface-variant">Enter Age, Experience, Income, and Satisfaction level to generate a predictive risk assessment for employee attrition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    (function () {
+        const form = document.getElementById("predictionForm");
+        const predictBtn = document.getElementById("predictBtn");
+        const predictBtnText = document.getElementById("predictBtnText");
+        const predictIcon = document.getElementById("predictIcon");
+        const resultCard = document.getElementById("resultCard");
+        const insightCard = document.getElementById("insightCard");
+        const emptyStateCard = document.getElementById("emptyStateCard");
+        const emptyTipCard = document.getElementById("emptyTipCard");
+
+        function showWaitingState() {
+            resultCard?.classList.add("hidden");
+            insightCard?.classList.add("hidden");
+            emptyStateCard?.classList.remove("hidden");
+            emptyTipCard?.classList.remove("hidden");
+        }
+
+        form?.addEventListener("input", function () {
+            showWaitingState();
+        });
+
+        form?.addEventListener("submit", function () {
+            if (!predictBtn || !predictBtnText || !predictIcon) return;
+            predictBtn.disabled = true;
+            predictBtnText.textContent = "Analyzing...";
+            predictIcon.classList.remove("material-symbols-outlined");
+            predictIcon.textContent = "";
+            predictIcon.innerHTML = "<span class='inline-block w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin'></span>";
+        });
+    })();
+</script>
+
+<!-- Mobile bottom nav -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 flex justify-around items-center h-16 z-50">
+    <a href="/" class="flex flex-col items-center gap-1 text-slate-900">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        <span class="text-[10px] font-medium">Home</span>
+    </a>
+    <a href="/history" class="flex flex-col items-center gap-1 text-slate-500">
+        <span class="material-symbols-outlined text-[20px]">history</span>
+        <span class="text-[10px] font-medium">History</span>
+    </a>
+    <a href="/dashboard" class="flex flex-col items-center gap-1 text-slate-500">
+        <span class="material-symbols-outlined text-[20px]">analytics</span>
+        <span class="text-[10px] font-medium">Dashboard</span>
+    </a>
+</div>
+
+</body>
+</html>
