@@ -1,0 +1,92 @@
+/* ============================================================
+   Inventeron — Global Stylesheet
+   Material Design + Tailwind design system overrides
+   ============================================================ */
+
+/* Material Symbols Icon font settings */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Scrollbar Styling ─────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f2f4f6;
+}
+::-webkit-scrollbar-thumb {
+    background: #c6c6cd;
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #76777d;
+}
+
+/* ── Smooth page transitions ───────────────────────────────── */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Spinner animation ─────────────────────────────────────── */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 0.8s linear infinite;
+}
+
+/* ── Progress bar animation ────────────────────────────────── */
+@keyframes growWidth {
+    from { width: 0%; }
+    to   { width: var(--target-width, 100%); }
+}
+
+.animate-grow {
+    animation: growWidth 0.8s ease-out forwards;
+}
+
+/* ── Card hover lift ───────────────────────────────────────── */
+.card-lift {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.10);
+}
+
+/* ── Focus ring accessibility ──────────────────────────────── */
+:focus-visible {
+    outline: 2px solid #0058be;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ── Active nav indicator ──────────────────────────────────── */
+.nav-active {
+    font-weight: 600;
+    border-right: 2px solid #191c1e;
+    background-color: #f8fafc;
+}
+
+/* ── Risk badge colors ─────────────────────────────────────── */
+.badge-high   { background: #ffdad6; color: #93000a; }
+.badge-medium { background: #fef3c7; color: #92400e; }
+.badge-low    { background: #d1fae5; color: #065f46; }
+
+/* ── Responsive table ──────────────────────────────────────── */
+@media (max-width: 640px) {
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+}
