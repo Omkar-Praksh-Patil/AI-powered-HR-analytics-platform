@@ -1,4 +1,4 @@
-name: CI — Lint & Test
+name: AttritionIQ CI — Lint & Test
 
 on:
   push:
@@ -41,4 +41,4 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics --exclude=venv/
 
       - name: Check imports
-        run: python -c "import flask, numpy, sklearn, pymongo; print('All imports OK')"
+        run: python -c "import flask, numpy, sklearn, pymongo; print('✅ AttritionIQ — All imports OK')"

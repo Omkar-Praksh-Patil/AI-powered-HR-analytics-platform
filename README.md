@@ -1,18 +1,19 @@
-# 🧠 Inventeron — Employee Attrition Predictor
+# 🧠 AttritionIQ — AI-Powered Employee Attrition Predictor
 
-> An AI-powered HR analytics web application that predicts employee attrition risk using Machine Learning, built with Flask and MongoDB.
+> AttritionIQ is an intelligent HR analytics platform that predicts employee attrition risk using Machine Learning — built with Flask, scikit-learn, and MongoDB.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.0-black?logo=flask)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4-orange?logo=scikit-learn)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+![CI](https://github.com/Omkar-Praksh-Patil/AI-powered-HR-analytics-platform/actions/workflows/ci.yml/badge.svg)
 
 ---
 
 ## 📌 About
 
-**Inventeron** is an enterprise-grade HR analytics platform that uses a trained **Random Forest classifier** to predict whether an employee is likely to leave the organization. HR managers can input employee data and instantly receive a **risk classification** (High / Medium / Low) along with an **attrition probability score**.
+**AttritionIQ** is an enterprise-grade HR analytics platform that uses a trained **Random Forest classifier** to predict whether an employee is likely to leave the organization. HR managers can input employee data and instantly receive a **risk classification** (High / Medium / Low) along with an **attrition probability score**.
 
 ---
 
@@ -20,12 +21,13 @@
 
 | Feature | Description |
 |---------|-------------|
-| 🔮 **AI Prediction** | Predicts attrition risk using a trained ML model |
+| 🔮 **AI Prediction** | Predicts attrition risk using a trained Random Forest model |
 | 📊 **Analytics Dashboard** | Visual breakdown of all predictions with Chart.js |
 | 📋 **Prediction History** | Full log of all past predictions stored in MongoDB |
 | ⚠️ **Risk Classification** | High / Medium / Low risk levels with retention insights |
 | 🔄 **MongoDB Fallback** | In-memory fallback if MongoDB is unavailable |
 | 📱 **Responsive UI** | Works on desktop and mobile with sidebar navigation |
+| 🤖 **CI/CD Pipeline** | GitHub Actions for automated linting and validation |
 
 ---
 
@@ -35,6 +37,7 @@
 - **ML Model**: scikit-learn (Random Forest Classifier)
 - **Database**: MongoDB (with pymongo)
 - **Frontend**: HTML5, Tailwind CSS, Chart.js
+- **DevOps**: GitHub Actions CI
 - **Dataset**: IBM HR Analytics Employee Attrition dataset
 
 ---
@@ -49,8 +52,8 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/inventeron.git
-cd inventeron
+git clone https://github.com/Omkar-Praksh-Patil/AI-powered-HR-analytics-platform.git
+cd AI-powered-HR-analytics-platform
 
 # 2. Create a virtual environment
 python -m venv venv
@@ -88,19 +91,23 @@ Visit `http://127.0.0.1:5000` in your browser.
 ## 📂 Project Structure
 
 ```
-inventeron/
+AttritionIQ/
 ├── app.py               # Main Flask application & routes
 ├── clean_data.py        # Data preprocessing script
 ├── train_model.py       # Model training script
 ├── requirements.txt     # Python dependencies
 ├── .env.example         # Environment variable template
 ├── .gitignore           # Git ignore rules
+├── .github/
+│   └── workflows/
+│       └── ci.yml       # GitHub Actions CI pipeline
 ├── templates/
 │   ├── index.html       # Prediction form (Home page)
 │   ├── history.html     # Prediction history page
 │   └── dashboard.html   # Analytics dashboard
 └── static/
-    └── css/             # Stylesheets
+    └── css/
+        └── style.css    # External stylesheet
 ```
 
 ---
@@ -156,7 +163,7 @@ Each prediction is stored as a document:
 
 ## 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+Pull requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
@@ -168,6 +175,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Omkar** — Built as part of the Inventeron HR Analytics platform.
+**Omkar Prakash Patil** — Built AttritionIQ as part of an AI-powered HR analytics initiative.
 
 > ⭐ If you found this helpful, please give the repo a star!

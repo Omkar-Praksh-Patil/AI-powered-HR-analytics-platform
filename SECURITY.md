@@ -1,4 +1,4 @@
-# Security Policy
+# Security Policy — AttritionIQ
 
 ## Supported Versions
 
@@ -8,10 +8,10 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in Inventeron, please:
+If you discover a security vulnerability in AttritionIQ, please:
 
 1. **Do NOT** open a public GitHub issue.
-2. Email the details to: `omkar@inventeron.dev`
+2. Email the details to: `omkar.praksh.patil@gmail.com`
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce

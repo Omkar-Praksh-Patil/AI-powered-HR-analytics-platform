@@ -1,6 +1,6 @@
-# Contributing to Inventeron
+# Contributing to AttritionIQ
 
-Thank you for considering contributing to Inventeron! 🎉
+Thank you for considering contributing to AttritionIQ! 🎉
 
 ## How to Contribute
 
@@ -35,6 +35,7 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 | `style:` | CSS/formatting changes |
 | `refactor:` | Code refactoring |
 | `chore:` | Build process, config changes |
+| `ci:` | CI/CD pipeline changes |
 
 ### Code Style
 - Follow PEP 8 for Python code
@@ -44,8 +45,8 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 ### Setting Up Dev Environment
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/inventeron.git
-cd inventeron
+git clone https://github.com/Omkar-Praksh-Patil/AI-powered-HR-analytics-platform.git
+cd AI-powered-HR-analytics-platform
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt

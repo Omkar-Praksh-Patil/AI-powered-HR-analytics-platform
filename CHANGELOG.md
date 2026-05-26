@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to **Inventeron** will be documented in this file.
+All notable changes to **AttritionIQ** will be documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
@@ -21,6 +21,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - 🔮 Loading spinner animation during model inference
 - 📄 Environment variable support for MongoDB URI and Flask debug mode
 - 🗂️ External CSS stylesheet with animations, scrollbar, and badge styles
+- 🤖 GitHub Actions CI pipeline for linting and validation
+- 📝 CONTRIBUTING.md, CHANGELOG.md, SECURITY.md documentation
 
 ### Technical
 - `clean_data.py` — data preprocessing on IBM HR dataset
@@ -28,6 +30,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `requirements.txt` — pinned Python dependencies
 - `.env.example` — environment variable template
 - `.gitignore` — excludes venv, pycache, model, and dataset files
+
+### Branding
+- Project renamed from **Inventeron** to **AttritionIQ**
+- All templates updated with AttritionIQ branding and tagline
 
 ---
 

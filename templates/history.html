@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>HR Attrition Analyst - History</title>
+    <title>AttritionIQ - Prediction History</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -106,26 +106,19 @@
           },
         }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.filled {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 </head>
 <body class="bg-background text-on-background antialiased min-h-screen">
 
 <!-- SideNavBar -->
 <nav class="hidden md:flex bg-white fixed left-0 top-0 h-full w-[260px] border-r border-slate-200 shadow-sm flex-col py-6 z-50">
     <div class="px-6 mb-8 flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
-            HR
+        <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs">
+            IQ
         </div>
         <div>
-            <h1 class="text-xl font-bold text-slate-900 tracking-tighter">HR Intel</h1>
-            <p class="font-label-sm text-label-sm text-on-surface-variant">Enterprise Analytics</p>
+            <h1 class="text-xl font-bold text-slate-900 tracking-tighter">AttritionIQ</h1>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">AI-Powered HR Analytics</p>
         </div>
     </div>
     <div class="flex-1 flex flex-col gap-1 px-2">
@@ -153,7 +146,7 @@
 <!-- TopNavBar -->
 <header class="hidden md:flex bg-white/80 backdrop-blur-md sticky top-0 z-40 w-full border-b border-slate-200 justify-between items-center h-16 px-8 md:ml-[260px]" style="width: calc(100% - 260px);">
     <div class="flex items-center gap-4">
-        <span class="text-lg font-black text-slate-900">HR Attrition Analyst</span>
+        <span class="text-lg font-black text-slate-900">AttritionIQ</span>
     </div>
     <div class="flex items-center gap-6">
         <div class="relative w-64 hidden sm:block">
